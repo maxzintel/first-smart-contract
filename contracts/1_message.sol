@@ -20,10 +20,14 @@ contract Inbox {
         message = initialMessage;
     }
 
+    // Normal functions are functions we can optionally call after the contract has been deployed to the blockchain.
+
+    //                can be called with this arg.
     function setMessage(string memory newMessage) public {
-        message = newMessage;
+        message = newMessage; // accesses the argument with this var.
     }
 
+    //       fnc name     fnc type    return types
     function getMessage() public view returns (string memory) {
         return message;
     }
