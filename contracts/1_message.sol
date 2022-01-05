@@ -14,9 +14,9 @@ contract Inbox {
     string public message; // string type, public = accessible to everyone in the world.
 
     // Below are the functions that will be members of the contract.
-    // Explicit data location for all variables of struct, array or mapping types is now mandatory, hence adding the memory bit. This now stores the parameter in local system memory.
-    // External Functions require parameters with data location of calldata.
-    function inbox(string memory initialMessage) public {
+
+    // A constructor is just a function that is automatically run once when the contract is created.
+    constructor(string memory initialMessage) {
         message = initialMessage;
     }
 
