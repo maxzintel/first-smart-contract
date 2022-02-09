@@ -12,6 +12,7 @@ contract Inbox {
     // String == Type.
     // This is a Storage Variable == A var that will be automatically stored with the contract on the blockchain. For all eternity!
     string public message; // string type, public = accessible to everyone in the world.
+    // ^ public function is automatically created. Making getMessage superfluous.
 
     // Below are the functions that will be members of the contract.
 
@@ -27,8 +28,9 @@ contract Inbox {
         message = newMessage; // accesses the argument with this var.
     }
 
+    // Removed, see comment on var.
     //       fnc name     fnc type    return types
-    function getMessage() public view returns (string memory) {
-        return message;
-    }
+    // function getMessage() public view returns (string memory) {
+    //     return message;
+    // }
 }
