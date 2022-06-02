@@ -38,4 +38,10 @@ describe('Inbox', () => {
     const message = await inbox.methods.message().call();
     assert.equal(message, defaultMessage);
   });
+
+  it('can set a message', async () => {
+    await inbox.methods.setMessage('foo bar').send({from: accounts[0], gas: '1000000'});
+    const message = await inbox.methods.message().call();
+    assert.equal(message, 'foo bar');
+  })
 })
