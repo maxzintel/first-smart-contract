@@ -5,6 +5,7 @@ const solc = require('solc');
 const inboxPath = path.resolve(__dirname, 'contracts', 'Inbox.sol'); // dirname = current working directory
 const source = fs.readFileSync(inboxPath, 'utf8');
 
+// Here could specify the actual file with FILENAME:Inbox. Since we are doing the source code as a whole, we didnt need to.
 module.exports = solc.compile(source, 1).contracts[':Inbox'];
 
 // compile with 'node compile.js'

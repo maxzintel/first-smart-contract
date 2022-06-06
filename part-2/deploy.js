@@ -4,6 +4,7 @@ const Web3 = require('web3');
 const { interface, bytecode } = require('./compile');
 require('dotenv').config()
 
+// Uses a test wallet on the Goerli network, directly injects seed phrase to create provider.
 const mnemonic = process.env.MNEMONIC;
 // Set provider to testnet wallet on goerli net.
 const provider = new HDWalletProvider({
